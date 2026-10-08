@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Portfolio architecture
+- Keep portfolio facts and document references in `src/lib/portfolio-data.ts`; centralized content allows future updates without changing the presentation.
+- Render this single-page portfolio at `/` with semantic section anchors; all sections belong to one continuous professional profile.
+- Gate document actions on actual file URLs and contact handoff on a verified email; unavailable source material must never produce fake downloads or successful-send claims.
