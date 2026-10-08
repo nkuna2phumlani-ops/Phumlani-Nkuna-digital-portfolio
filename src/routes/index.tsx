@@ -58,7 +58,7 @@ function Index() {
     setFormStatus("Your email app has been opened. Review and send your message there.");
   }
 
-  function DownloadAction({ document, label = "Download", header = false }: { document?: PortfolioDocument; label?: string; header?: boolean }) {
+  function DownloadAction({ document, label = "Download", header = false }: { document?: PortfolioDocument | undefined; label?: string; header?: boolean }) {
     if (document && canDownloadDocument(document)) return <Button variant="portfolio" className={header ? "header-download" : ""} asChild><a href={document.url} download={document.filename}><Download size={15} />{label}</a></Button>;
     return <Button variant={header ? "portfolio" : "glass"} className={header ? "header-download" : ""} disabled title="Awaiting the supplied document"><Download size={15} />{label}</Button>;
   }
